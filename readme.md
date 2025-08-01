@@ -19,6 +19,9 @@ crackleaf/
 ├── main.py                 # Tkinter UI 主程序
 ├── assets/                 # 图标、UI资源
 ├── requirements.txt        # 依赖库列表
+├── .pre-commit-config.yaml # pre-commit hook 配置
+├── pyproject.toml          # 项目配置，含 commitizen 信息
+├── CHANGELOG.md            # 自动生成的更新日志
 └── README.md               # 项目说明
 ```
 
@@ -31,6 +34,8 @@ crackleaf/
 - PyPDF2
 - tkinter（Python 标准库自带）
 - nuitka（用于打包）
+- commitizen（版本管理与 changelog 自动生成）
+- pre-commit（提交信息校验）
 - 其他依赖见 requirements.txt
 
 ---
@@ -145,3 +150,25 @@ crackleaf/
 ---
 
 项目地址：[https://github.com/muxiaoxiii/crackleaf](https://github.com/muxiaoxiii/crackleaf)
+
+---
+
+## 9. 版本控制与变更日志自动化
+
+本项目采用 [Commitizen](https://commitizen-tools.github.io/commitizen/) 管理版本号和更新日志，规范提交格式，确保可维护性。
+
+- 使用 `cz commit` 代替 `git commit`，引导规范提交
+- 使用 `cz bump` 自动判断版本升级类型，并更新版本号与 `CHANGELOG.md`
+- 所有提交信息遵循 Conventional Commit 格式（如 `feat`, `fix`, `chore` 等）
+- 提交前自动检查格式（使用 `pre-commit` 安装 hook）
+
+如需生成或查看更新日志，请执行：
+
+```bash
+cz changelog
+```
+或直接版本升级：
+
+```bash
+cz bump
+```
