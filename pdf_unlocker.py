@@ -12,8 +12,10 @@ from PyPDF2.errors import DependencyError as PyPDF2DependencyError
 from typing import Optional, TypedDict
 from pathlib import Path
 from typing import List
+import logging
+logger = logging.getLogger("crackleaf")
+logging.basicConfig(level=logging.INFO)
 
-from logger import logger
 
 class WrongPasswordError(Exception): pass
 
