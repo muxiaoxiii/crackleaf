@@ -19,10 +19,12 @@ pillow==11.3.0
 platformdirs==4.3.8
 pre_commit==4.2.0
 prompt_toolkit==3.0.51
+pycryptodome==3.23.0
 PyPDF2==3.0.1
 PyYAML==6.0.2
 questionary==2.1.0
 termcolor==3.1.0
+tkinterdnd2==0.4.3
 tomlkit==0.13.3
 virtualenv==20.32.0
 wcwidth==0.2.13
